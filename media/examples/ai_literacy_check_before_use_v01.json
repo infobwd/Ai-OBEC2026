@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.2",
+  "work_id": "AI-LITERACY-DEMO",
+  "revision": "v01",
+  "source_version": "general-educational-example",
+  "audience": "ครูและบุคลากรทางการศึกษา",
+  "status": "demo",
+  "format": {
+    "paper": "A4",
+    "orientation": "portrait",
+    "target_px": [
+      2480,
+      3508
+    ]
+  },
+  "panels": [
+    {
+      "id": "01",
+      "title": "4 ขั้นก่อนใช้ผล AI",
+      "takeaway": "AI ช่วยคิด ครูเป็นผู้ตัดสินใจ",
+      "exact_text": [
+        {
+          "heading": "1 จำกัด",
+          "body": "เลือกงาน ข้อมูล และเครื่องมือที่ได้รับอนุญาต"
+        },
+        {
+          "heading": "2 ตรวจ",
+          "body": "เทียบคำตอบกับหลักฐานต้นฉบับ"
+        },
+        {
+          "heading": "3 ปรับ",
+          "body": "แก้อคติ ข้อผิดพลาด และข้อมูลที่ไม่ควรเปิดเผย"
+        },
+        {
+          "heading": "4 อนุมัติ",
+          "body": "ให้มนุษย์ตรวจและตัดสินใจก่อนใช้จริง"
+        }
+      ],
+      "visual_brief": "A4 portrait, clean Thai educational infographic; navy, teal, soft gold, off-white; four numbered steps with simple icons; footer: AI Literacy • สื่อสาธิต v01 • ไม่ใช่ประกาศทางการ",
+      "source_refs": [
+        "หลักการทั่วไปของการตรวจสอบผล AI โดยมนุษย์"
+      ],
+      "claim_status": "ข้อเสนอแนวปฏิบัติทั่วไป"
+    }
+  ]
+}
