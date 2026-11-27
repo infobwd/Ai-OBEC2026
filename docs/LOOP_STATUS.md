@@ -13,3 +13,5 @@ Detailed evidence, deliverables and run logs are maintained in the internal docu
 - Media workflow V1.2 added. D1 infographic pilot storyboard is available as a public-safe generic example. Full D1/P1 media backfill remains MEDIA_PENDING; D2 is still next in the academic queue. Image QA and internal delivery must be verified separately. Existing automation schedule unchanged.
 
 - V1.3 media requirement: at least two QA-checked visual variants per panel, both delivered internally; existing D1/P1 media backlog remains pending until actual delivery. D2 remains next academically.
+
+- D1 pilot panel 01: two distinct PNG variants A/B uploaded to the internal document store and byte readback verified. Both are portrait A4-proportion previews (1055 × 1491 px), below the 300 dpi print target; print QA and full media backfill remain PARTIAL/MEDIA_PENDING. No PDF regenerated.
