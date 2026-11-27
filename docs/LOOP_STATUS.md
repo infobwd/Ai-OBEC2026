@@ -17,3 +17,5 @@ Detailed evidence, deliverables and run logs are maintained in the internal docu
 - D1 pilot panel 01: two distinct PNG variants A/B uploaded to the internal document store and byte readback verified. Both are portrait A4-proportion previews (1055 × 1491 px), below the 300 dpi print target; print QA and full media backfill remain PARTIAL/MEDIA_PENDING. No PDF regenerated.
 
 - V1.4 approved: A4 and square 1:1 variants A/B per panel. Square pilot and full media backfill remain pending actual QA/delivery; D2 remains next academically; schedule unchanged.
+
+- V1.4 D1 pilot panel 01: square A/B delivered and raw readback confirmed (1254×1254 and 1440×1440 px); square screen QA passed internally. A generated with ChatGPT images; B uses direct Thai typesetting fallback after generated academic draft failed content QA. Internal metadata/log revision delivered. Overall PARTIAL: A4 print QA and remaining D1/P1 media backfill pending. D2 remains next academically; no PDF regeneration or schedule change.
