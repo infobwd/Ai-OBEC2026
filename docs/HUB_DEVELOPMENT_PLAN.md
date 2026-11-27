@@ -19,3 +19,10 @@ Academic jobs: PLAN_KNOWLEDGE, EXTRA_KNOWLEDGE, REVISION; media jobs: MEDIA_BACK
 
 ## Initial implementation
 H0 latest log reconciled with current overview: D1/D2 delivered internally, D3 next subject to revised day-3 evidence, P1 media pending. Historical logs retained. H1 initialize registry from actual log; source registry remains referenced, not copied publicly. H2 code preview reads only public aggregate status. Live private operations and Pages deployment require separate verification. H3–H5 remain pending until authentication, claim/retry and readback tests pass. No change to existing Knowledge Loop or academic queue.
+
+## สถานะการดำเนินงาน 27 พฤศจิกายน 2569
+- H0 PASS (log reconciliation): latest internal log and source registry read, 29 source rows in register; D3 remains next academically. This is not a new full source scan or artifact QA.
+- H1 PARTIAL: six-tab pilot workbook built locally from the verified log/registry (Overview, Queue, Sources, Artifacts, Runs, Hub_Plan). Native import returned INVALID_ARGUMENT; no confirmed Google Sheets creation, no operational queue or migration. Check folder for duplicate before retry. Keep pilot internal.
+- H2 PARTIAL: hub/index.html V0.1 committed and read back, public-only status text with explicit unavailable state. Pages deployment and browser test not verified; no private backend.
+- H3–H5 PENDING: complete H1 readback first, then restricted Apps Script deployment and auth/queue tests. Never expose credentials/Drive links publicly. Do not alter existing academic automation. 
+- Next action: verify internal native registry import and its schema/rows, then test H2 and deploy only the public-safe preview. Do not replace authoritative backlog or treat pilot statuses as delivery receipts.
