@@ -42,7 +42,7 @@
   "hub": {
     "H0": "VERIFIED",
     "H1": "PILOT_VERIFIED",
-    "H2": "PROTOTYPE",
+    "H2": "STUDIO_COMMITTED",
     "H3": "SANDBOX_ADAPTER_TESTED",
     "H4": "PENDING",
     "H5": "PENDING"
