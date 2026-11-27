@@ -9,3 +9,5 @@ Updated: 2026-11-27
 - Daily source monitoring continues under the existing plan.
 
 Detailed evidence, deliverables and run logs are maintained in the internal document store only. This is project progress, not official curriculum approval.
+
+- Media workflow V1.2 added. D1 infographic pilot storyboard is available as a public-safe generic example. Full D1/P1 media backfill remains MEDIA_PENDING; D2 is still next in the academic queue. Image QA and internal delivery must be verified separately. Existing automation schedule unchanged.
