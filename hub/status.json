@@ -43,7 +43,7 @@
     "H0": "VERIFIED",
     "H1": "PILOT_VERIFIED",
     "H2": "PROTOTYPE",
-    "H3": "SANDBOX_CORE_TESTED",
+    "H3": "SANDBOX_ADAPTER_TESTED",
     "H4": "PENDING",
     "H5": "PENDING"
   },
