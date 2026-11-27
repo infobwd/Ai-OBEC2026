@@ -1,32 +1,23 @@
 // H3 sandbox adapter. Do not deploy anonymously. No production IDs or credentials.
 function sandboxActor_(){
-  const props=PropertiesService.getScriptProperties();
-  if(props.getProperty("HUB_MODE")!=="SANDBOX_ONLY")throw new Error("DISABLED");
-  const email=String(Session.getActiveUser().getEmail()||"").trim().toLowerCase();
-  let roles;try{roles=JSON.parse(props.getProperty("HUB_ROLE_MAP")||"{}");}catch(e){throw new Error("DENIED");}
-  if(!email||!Object.prototype.hasOwnProperty.call(roles,email)||!["ADMIN","WORKER","VIEWER"].includes(roles[email]))throw new Error("DENIED");
-  return {id:email,role:roles[email]};
+  const p=PropertiesService.getScriptProperties();
+  return sandboxAuthorize_(p.getProperty("HUB_MODE"),Session.getActiveUser().getEmail(),p.getProperty("HUB_ROLE_MAP"));
 }
 
 function sandboxDispatch_(req){
   const actor=sandboxActor_();
   const lock=LockService.getScriptLock();
-  if(!lock.tryLock(5000))return {ok:false,code:"BUSY"};
-  try{
-    const props=PropertiesService.getScriptProperties();
-    const raw=props.getProperty("HUB_SANDBOX_STATE");
-    if(!raw)return {ok:false,code:"NOT_INITIALIZED"};
-    let state;try{state=JSON.parse(raw);}catch(e){return {ok:false,code:"BAD_STATE"};}
-    const result=queueCore(state,actor,req,Date.now(),Utilities.getUuid());
-    const next=JSON.stringify(state);
-    if(result.ok&&next!==raw){
-      // Fail before committing if the bounded synthetic journal approaches property limits.
-      if(Utilities.newBlob(next).getBytes().length>8000)return {ok:false,code:"SANDBOX_CAPACITY_REACHED"};
-      props.setProperty("HUB_SANDBOX_STATE",next);
-      if(props.getProperty("HUB_SANDBOX_STATE")!==next)return {ok:false,code:"READBACK_UNCERTAIN"};
-    }
-    return result;
-  }finally{lock.releaseLock();}
+  const props=PropertiesService.getScriptProperties();
+  return sandboxTransaction_({
+    tryLock:()=>lock.tryLock(5000),
+    release:()=>lock.releaseLock(),
+    read:()=>props.getProperty("HUB_SANDBOX_STATE"),
+    write:value=>props.setProperty("HUB_SANDBOX_STATE",value),
+    core:queueCore,
+    now:()=>Date.now(),
+    token:()=>Utilities.getUuid(),
+    bytes:value=>Utilities.newBlob(value).getBytes().length
+  },actor,req);
 }
 
 function initializeSandbox(){
