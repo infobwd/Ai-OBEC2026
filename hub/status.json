@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-27",
+  "mode": "MANUAL_VERIFIED_SNAPSHOT",
+  "domains_total": 6,
+  "domains_internal_delivered": 2,
+  "media_variants": 64,
+  "domains": [
+    {
+      "id": "D1",
+      "status": "DELIVERED_INTERNAL",
+      "media_count": 36
+    },
+    {
+      "id": "D2",
+      "status": "DELIVERED_INTERNAL",
+      "media_count": 28
+    },
+    {
+      "id": "D3",
+      "status": "PENDING_REVIEW",
+      "media_count": 0
+    },
+    {
+      "id": "D4",
+      "status": "PENDING",
+      "media_count": 0
+    },
+    {
+      "id": "D5",
+      "status": "PENDING_REVIEW",
+      "media_count": 0
+    },
+    {
+      "id": "D6",
+      "status": "PENDING_REVIEW",
+      "media_count": 0
+    }
+  ],
+  "next_academic": "D3",
+  "pending_media": "P1",
+  "hub": {
+    "H0": "VERIFIED",
+    "H1": "PILOT_VERIFIED",
+    "H2": "PROTOTYPE",
+    "H3": "PENDING",
+    "H4": "PENDING",
+    "H5": "PENDING"
+  },
+  "note": "Aggregate snapshot only. Not official approval, not a live queue, no new artifact QA."
+}
